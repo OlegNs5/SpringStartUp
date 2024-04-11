@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+        <bean id="thumbnailService" class="ro.ctrln.service.ThumbnailService">
+                <constructor-arg name="thumbnailRepository" ref="thumbnailRepository"/>
+        </bean>
+        <bean id="processingService" class="ro.ctrln.service.ProcessingService">
+                <constructor-arg name="thumbnailRepository" ref="thumbnailRepository"/>
+        </bean>
+        <bean id="thumbnailRepository" class="ro.ctrln.repository.ThumbnailRepository"/>
+</beans>
